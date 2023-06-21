@@ -68,6 +68,7 @@ const decrement = (id) => {
 
             <div>Total Price</div>
             <div>Rs. 195</div>
+            <div>Gaurav Kutta</div>
 
             </div>
             
