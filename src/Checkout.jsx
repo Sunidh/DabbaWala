@@ -67,6 +67,7 @@ const decrement = (id) => {
             <div className='col-xl-6 border col-md-6 mb-4 '>
 
             <div>Total Price</div>
+            <div>Rs. 195</div>
 
             </div>
             
