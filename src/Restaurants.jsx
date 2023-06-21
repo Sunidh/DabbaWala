@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import resto from './image/photo-11.png'
 import offerimg1 from './image/offerimg1.jpg'
 import food4 from './image/food-4.jpg'
@@ -67,47 +68,49 @@ export default function Restaurants() {
             restaurants.length > 0 ? restaurants.map((restaurant, index) => {
               return (
                 <div className="col-xl-6 col-md-6">
-                  <div class="card shadow mb-4">
-                    <div className="container">
-                      <div class="text-start py-3">
-                        <img style={{ height: "100px", width: "100px", borderRadius: "7px" }} src={resto1} alt="" />
-                      </div>
-                      <div className="pt-1 text-start">
-                        <h4 style={{ fontWeight: "bold" }}>{restaurant.resturantName}</h4>
-                      </div>
-                      <div className="d-flex pb-1" style={{ color: "#f29f05" }}>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
+                  <Link to="/restaurantd" style={{textDecoration:"none"}}>
+                    <div class="card shadow mb-4">
+                      <div className="container">
+                        <div class="text-start py-3">
+                          <img style={{ height: "100px", width: "100px", borderRadius: "7px" }} src={resto1} alt="" />
+                        </div>
+                        <div className="pt-1 text-start">
+                          <h4 style={{ fontWeight: "bold" }}>{restaurant.resturantName}</h4>
+                        </div>
+                        <div className="d-flex pb-1" style={{ color: "#f29f05" }}>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
 
-                      <div className='d-flex py-2'>
-                        <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>
-                          Breakfast
-                        </button>
-                        <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>Lunch</button>
-                        <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>Dinner</button>
+                        <div className='d-flex py-2'>
+                          <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>
+                            Breakfast
+                          </button>
+                          <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>Lunch</button>
+                          <button className='me-2 ' style={{ borderRadius: "5px", color: "#f29f05", border: "1px solid #f29f05", backgroundColor: "transparent" }}>
+                            Dinner</button>
+
+                        </div>
+
+                        <div className="detail py-2 text-start" style={{ color: "grey" }}>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, maxime consequatur. Illo tenetur quas neque accusantium modi, velit corrupti reprehenderit nesciunt, nam tempore illum minima inventore labore quam nemo nisi.
+
+                          </p>
+                        </div>
 
                       </div>
-
-                      <div className="detail py-2 text-start" style={{ color: "grey" }}>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, maxime consequatur. Illo tenetur quas neque accusantium modi, velit corrupti reprehenderit nesciunt, nam tempore illum minima inventore labore quam nemo nisi.
-
-                        </p>
-                      </div>
-
                     </div>
-                  </div>
-
+                  </Link>
 
                 </div>
               );
             }) : "No Resturants AVailable"
           }
-          
+
         </div>
 
 
