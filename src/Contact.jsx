@@ -1,7 +1,11 @@
 import React from 'react'
 import contacts from './image/contacts-1.png'
+import Navbar from './Navbar'
+import Footer from './Footer'
 export default function Contact() {
   return (
+   <div>
+    <Navbar/>
     <div className='container py-5'>
       <div className="d-flex justify-content-between flex-wrap pb-5">
           <div className=" text-start w-50 " style={{ width: "28rem" }}>
@@ -183,5 +187,7 @@ export default function Contact() {
 </div>
        </div>
     </div>
+    <Footer/>
+   </div>
   )
 }

@@ -3,9 +3,13 @@ import time from './image/time.png'
 import Team from './image/Team.jpg'
 import teamsa from './image/team-1.png'
 import teamsb from './image/team-2.png'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 export default function About() {
     return (
+       <div>
+        <Navbar/>
         <div className='container'>
             <div className="d-flex justify-content-between flex-wrap py-5">
                 <div className=" text-start w-50 pt-5" style={{ width: "28rem" }}>
@@ -146,5 +150,7 @@ export default function About() {
             </div>
            </div>
         </div>
+        <Footer/>
+       </div>
     )
 }

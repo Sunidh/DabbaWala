@@ -6,6 +6,8 @@ import food4 from './image/food-4.jpg'
 import resto1 from './image/resto1.jpg'
 import axios from "axios"
 import { base_url } from './apiLinks'
+import Navbar from './Navbar'
+import Footer from './Footer'
 export default function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
 
@@ -21,6 +23,8 @@ export default function Restaurants() {
     )
   }, []);
   return (
+   <div>
+    <Navbar/>
     <div className='container'>
       <div className="d-flex justify-content-between flex-wrap py-5">
         <div className=" text-start w-50 pt-5" style={{ width: "28rem" }}>
@@ -117,5 +121,7 @@ export default function Restaurants() {
       </div>
 
     </div>
+    <Footer/>
+   </div>
   )
 }
