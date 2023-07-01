@@ -9,7 +9,7 @@ export default function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    axios.get(`${base_url}/resturants`).then(
+    axios.get(`${base_url}/api/all/all-restaurants`).then(
       (response) => {
         setRestaurants(response.data);
         console.log(response.data);
