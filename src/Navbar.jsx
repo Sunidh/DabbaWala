@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo1 from './Logo1'
-import { Link ,BrowserRouter,Route,Routes} from 'react-router-dom';
+import { Link ,BrowserRouter,Route,Routes, useNavigate} from 'react-router-dom';
 export default function Navbar() {
+  const navigate=useNavigate();
   return (
     <div className='container'>
     <div className="Navbar">
@@ -40,8 +41,8 @@ export default function Navbar() {
             </ul>
             <form className="d-flex" role="search">
            <Link to="/checkout"> <i class="fa-solid fa-bag-shopping me-4" style={{fontSize:'30px',color:'#f29f05'}}></i></Link>
-              <button className="btn text-white" type="submit" style={{backgroundColor:"#f29f05"}}>
-                <Link to="/restaurants" className=" text-white" style={{textDecoration:"none"}}>Order&nbsp;now</Link></button>
+              <button className="btn text-white" type="submit" style={{backgroundColor:"#f29f05"}} onClick={()=>navigate("/signup")}>
+                Sign&nbsp;Up</button>
             </form>
           </div>
         </div>

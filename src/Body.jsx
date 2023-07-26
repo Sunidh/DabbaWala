@@ -9,10 +9,14 @@ import Photo4 from './image/photo-4.png';
 import merchant from './image/merchant.jpg';
 import subscribe from './image/subscribe.png'
 import { base_url } from './apiLinks'
+import Navbar from './Navbar';
+import Footer from './Footer'; 
 
 export default function Body() {
   return (
     <div>
+      <Navbar/>
+      <div>
       <div className="container">
         <div className="d-flex justify-content-between flex-wrap pb-5">
           <div className=" text-start w-50 " style={{ width: "28rem" }}>
@@ -325,6 +329,8 @@ export default function Body() {
         </div>
 
       </div>
+    </div>
+    <Footer/>
     </div>
   )
 }

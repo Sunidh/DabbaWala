@@ -6,6 +6,8 @@ import resto1 from './image/resto1.jpg'
 import Breakfast  from './Breakfast'
 import Lunch from './Lunch'
 import Dinner from './Dinner'
+import Navbar from './Navbar'
+import Footer from './Footer'
 export default function Restaurantd() {
   const [activePage, setActivePage] = useState('breakfast');
 
@@ -30,7 +32,9 @@ export default function Restaurantd() {
   
   return (
     
-    <div className='container'>
+    <div>
+      <Navbar/>
+      <div className='container'>
        <div className="d-flex justify-content-between flex-wrap py-5">
           <div className=" text-start w-50 py-5" style={{ width: "28rem" }}>
           <div class="card  mb-4 border-0 " style={{backgroundColor:"transparent"}}>
@@ -102,6 +106,8 @@ export default function Restaurantd() {
       </div>
 
       <div id="result">{renderPage()}</div>
+    </div>
+    <Footer/>
     </div>
   );
 }
