@@ -7,14 +7,14 @@ export default function Footer() {
       <div className="container py-5">
 
       <div className="row">
-        <div class="col-xl-6 col-md-6 mb-4 px-0">
-          <div class="card h-100  border-0">
+        <div className="col-xl-6 col-md-6 mb-4 px-0">
+          <div className="card h-100  border-0">
             <div class="card-body" style={{ backgroundColor: "#363636" }}>
             <div className="text-start">
             <div className='d-flex'>
 
               <div className="" style={{ color: "#f29f05", fontSize: "30px", marginRight: "7px" }}>
-                <i class="fa-solid fa-bowl-food"></i>
+                <i className="fa-solid fa-bowl-food"></i>
               </div>
               <div>
                 <h5 style={{ fontWeight: "bold", marginTop: "10px", color: "white" }}>DABBA<span style={{ color: "#f29f05" }}>WALLA</span></h5>
@@ -30,34 +30,34 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div class="col-xl-6 col-md-6 mb-4 px-0">
-          <div class="card h-100 border-0">
-            <div class="card-body"  style={{ backgroundColor: "#363636" }}>
+        <div className="col-xl-6 col-md-6 mb-4 px-0">
+          <div className="card h-100 border-0">
+            <div className="card-body"  style={{ backgroundColor: "#363636" }}>
             <div className="text-start contact" style={{ color: "grey" }}>
             <p style={{ color: "grey", fontWeight: "bolder", fontSize: "20px" }}>CONTACTS</p>
 
             <div className='d-flex'>
-              <i class="fa-solid fa-location-dot mt-1" style={{ marginRight: "8px", fontSize: "20px" }}></i>
+              <i className="fa-solid fa-location-dot mt-1" style={{ marginRight: "8px", fontSize: "20px" }}></i>
               <p className='pl-3' style={{ color: "rgb(210,210,210)", fontSize: "20px" }}>Ambala, Haryana ,133207 ,India</p>
 
             </div>
             <hr style={{ color: "white" }} />
 
             <div className="d-flex">
-              <i class="fa-solid fa-envelope mt-1" style={{ marginRight: "8px" }}></i>
+              <i className="fa-solid fa-envelope mt-1" style={{ marginRight: "8px" }}></i>
               <p style={{ color: "rgb(210,210,210)", fontSize: "15px" }}>dabbawala.info@gmail.com</p>
             </div>
             <div className="d-flex" >
-              <i class="fa-solid fa-phone mt-1" style={{ marginRight: "8px" }}></i>
+              <i className="fa-solid fa-phone mt-1" style={{ marginRight: "8px" }}></i>
               <p style={{ color: "rgb(210,210,210)", fontSize: "15px" }}>+91 9113170477</p>
             </div>
             <div className="media-menu " >
               <ul className='d-flex text-start m-0 p-0' style={{ listStyleType: "none", justifyContent: "flex-start", }}>
-                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}> <i class="fa-brands fa-facebook-f my-2" ></i>
+                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}> <i className="fa-brands fa-facebook-f my-2" ></i>
 
                 </li>
-                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}><i class="fa-brands fa-instagram my-2"></i></li>
-                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}> <i class="fa-brands fa-twitter my-2"></i></li>
+                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}><i className="fa-brands fa-instagram my-2"></i></li>
+                <li className='mr-1' style={{ borderRadius: "50%", border: "1px solid rgb(210,210,210)", height: "40px", width: "40px", textAlign: "center", fontSize: "20px", marginRight: "16px" }}> <i className="fa-brands fa-twitter my-2"></i></li>
               </ul>
 
             </div>

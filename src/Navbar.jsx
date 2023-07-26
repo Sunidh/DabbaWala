@@ -40,7 +40,7 @@ export default function Navbar() {
               
             </ul>
             <form className="d-flex" role="search">
-           <Link to="/checkout"> <i class="fa-solid fa-bag-shopping me-4" style={{fontSize:'30px',color:'#f29f05'}}></i></Link>
+           <Link to="/checkout"> <i className="fa-solid fa-bag-shopping me-4" style={{fontSize:'30px',color:'#f29f05'}}></i></Link>
               <button className="btn text-white" type="submit" style={{backgroundColor:"#f29f05"}} onClick={()=>navigate("/signup")}>
                 Sign&nbsp;Up</button>
             </form>
