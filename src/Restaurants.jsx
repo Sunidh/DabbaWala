@@ -22,6 +22,17 @@ export default function Restaurants() {
       }
     )
   }, []);
+  // useEffect(() => {
+  //   axios.get(`${base_url}/api/all/all-restaurants`).then(
+  //     (response) => {
+  //       setRestaurants(response.data);
+  //       console.log(response.data);
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //     }
+  //   )
+  // }, []);
   return (
    <div>
     <Navbar/>
@@ -31,7 +42,7 @@ export default function Restaurants() {
           <p className='pt-5' style={{ fontSize: "60px", fontWeight: "bold", lineHeight: "80px" }}>Restaurants</p>
           <p className='pb-5 pt-3' style={{ color: "grey" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe explicabo perspiciatis ex vel rem quo </p>
           <select className='w-100 border-0 ' name="Choose a restaurant" id="" style={{ height: "40px", color: "#cfcfcf", fontSize: "20px", borderRadius: "5px" }}>
-            <option selected>Choose a restaurant</option>
+            <option defaultValue>Choose a restaurant</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>

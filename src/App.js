@@ -11,7 +11,7 @@ import Restaurants from './Restaurants';
 import Checkout from './Checkout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Signup from './Signup';
-
+import Login from './Login';
 function App() {
   return (
     <div className="App">
@@ -32,6 +32,7 @@ function App() {
       <Route exact path='/checkout' element={<Checkout/>}></Route>
       <Route exact path='/restaurantd' element={<Restaurantd/>}></Route>
       <Route exact path='/signup' element={<Signup/>}></Route>
+      <Route exact path='/login' element={<Login/>}></Route>
       
     </Routes>
      </BrowserRouter> 

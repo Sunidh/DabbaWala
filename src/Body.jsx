@@ -8,8 +8,10 @@ import Photo3 from './image/photo-3.png';
 import Photo4 from './image/photo-4.png';
 import merchant from './image/merchant.jpg';
 import subscribe from './image/subscribe.png'
+import { base_url } from './apiLinks'
 import Navbar from './Navbar';
-import Footer from './Footer';
+import Footer from './Footer'; 
+
 export default function Body() {
   return (
     <div>
@@ -22,8 +24,8 @@ export default function Body() {
               Restaurants<br />in Your Home.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe explicabo perspiciatis ex vel rem quo fuga ullam in, totam aspernatur ea quasi atque architecto doloribus dolorem! Adipisci ratione neque voluptatibus libero perferendis eos esse sequi. Quibusdam explicabo incidunt accusantium repellendus.</p>
             <div className='d-flex'>
-              <select class="form-select " aria-label="Default select example" style={{color:"gray"}}>
-                <option selected style={{color:"gray"}}>Select a Restaurant</option>
+              <select class="form-select " aria-label="Default select example" style={{ color: "gray" }}>
+                <option selected style={{ color: "gray" }}>Select a Restaurant</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -147,7 +149,7 @@ export default function Body() {
 
             </div>
           </div>
-        <div className="button mt-5" >
+          <div className="button mt-5" >
 
             <button style={{ borderRadius: "5px", border: "1px solid #f29f05", backgroundColor: "none", color: "#f29f05", width: "100px", height: "36px", fontSize: "15px" }}>
 
@@ -155,7 +157,7 @@ export default function Body() {
               <i class="fa-solid fa-arrow-right "></i>
 
             </button>
-          </div>  
+          </div>
         </div>
         <div>
           <div className="d-flex justify-content-between flex-wrap pb-5 my-5">
@@ -257,8 +259,8 @@ export default function Body() {
             Want To Join Partnership?
           </div>
           <div className="row">
-            <div class="col-xl-6 col-md-6 mb-4" style={{backgroundImage:`url(${merchant})` ,backgroundSize:"100% 100%",borderRadius:"20px"}}>
-              <div class="card border-0 shadow  py-2 bg-transparent " style={{height:"250px"}} >
+            <div class="col-xl-6 col-md-6 mb-4" style={{ backgroundImage: `url(${merchant})`, backgroundSize: "100% 100%", borderRadius: "20px" }}>
+              <div class="card border-0 shadow  py-2 bg-transparent " style={{ height: "250px" }} >
                 <div class="card-body bg-transparent">
                   {/* <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -269,21 +271,24 @@ export default function Body() {
                       <p style={{ color: "gray", fontSize: "20px" }}>Satisfied Customers</p>
                     </div>
                   </div> */}
-                  <div className="card-text text-start">
-                    <p style={{color:"white",fontWeight:"bolder",marginTop:"100px",fontSize:"35px"}}>Register Your Restaurant
-                    </p>
-                    <div className="button mt-5" >
-
-            <button style={{ borderRadius: "5px", border: "1px solid #f29f05", backgroundColor: "none", color: "#f29f05", width: "100px", height: "36px", fontSize: "15px",marginBottom:"2px" }}>
-
-              SEE ALL &nbsp;
-              <i class="fa-solid fa-arrow-right "></i>
-
-            </button>
-          </div> 
-                  </div>
                   
-                  
+
+
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-6 col-md-6 mb-4">
+              <div className="card-text card h-100 text-center" style={{backgroundColor: "#252525"}}>
+                <p className='mt-4' style={{ color: "white", fontWeight: "bolder", marginTop: "100px", fontSize: "35px" }}>Register Your Restaurant
+                </p>
+                <div className="button mt-5" >
+
+                  <a href={`${base_url}/restaurant-owner-registration`} rel="noreferrer" target='_blank' className='btn btn-warning text-dark'>
+
+                    Register Now &nbsp;
+                    <i class="fa-solid fa-arrow-right "></i>
+
+                  </a>
                 </div>
               </div>
             </div>
@@ -307,20 +312,20 @@ export default function Body() {
       </div>
       {/* Subscribe */}
       <div className="container py-5">
-      
-      <div className="d-flex justify-content-between flex-wrap py-5">
-      <div style={{ width: "28rem" }}>
+
+        <div className="d-flex justify-content-between flex-wrap py-5">
+          <div style={{ width: "28rem" }}>
             <img className='img-fluid' src={subscribe} alt="" />
           </div>
           <div className=" text-start w-50 " style={{ width: "28rem" }}>
             <p style={{ fontSize: "60px", fontWeight: "bold", lineHeight: "80px" }}>Get Hussle Free Delivery Everyday without ordering Daily</p>
-           
+
             <div className='d-flex'>
-              <input type='email' placeholder='Enter Your E-mail'  style={{border:"none",borderRadius:"5px"}}/>
+              <input type='email' placeholder='Enter Your E-mail' style={{ border: "none", borderRadius: "5px" }} />
               <button className="btn text-white ms-2" type="submit" style={{ backgroundColor: "#f29f05" }}>Subscribe</button>
             </div>
           </div>
-         
+
         </div>
 
       </div>
