@@ -21,9 +21,9 @@ export default function Breakfast() {
     return (
         <div className='container'>
             <div className="row">
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -34,10 +34,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -60,12 +60,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>
@@ -74,9 +74,9 @@ export default function Breakfast() {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -87,10 +87,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -113,12 +113,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>
@@ -127,9 +127,9 @@ export default function Breakfast() {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -140,10 +140,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -166,12 +166,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>
@@ -180,9 +180,9 @@ export default function Breakfast() {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -193,10 +193,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -219,12 +219,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>
@@ -233,9 +233,9 @@ export default function Breakfast() {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -246,10 +246,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -272,12 +272,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>
@@ -286,9 +286,9 @@ export default function Breakfast() {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
+                <div className="col-xl-4 col-md-6 mb-4">
+                    <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card-body">
                             <img src={dish1} className='img-fluid' alt="" />
                             <p className='py-3 text-start' style={{ fontSize: "30px", fontWeight: "bold" }}>Egg, kiwi and sauce chilli</p>
                             <div className="d-flex justify-content-between">
@@ -299,10 +299,10 @@ export default function Breakfast() {
                                 </div>
                                 <div className='d-flex '>
                                     <div className="icon1 me-3">
-                                        <i class="fa-solid fa-circle-info"></i>
+                                        <i className="fa-solid fa-circle-info"></i>
                                     </div>
                                     <div className="icon2">
-                                        <i class="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
+                                        <i className="fa-solid fa-heart" style={{ color: "#f29f05" }}></i>
                                     </div>
                                 </div>
 
@@ -325,12 +325,12 @@ export default function Breakfast() {
 
                             </div>
                             
-                            <div class="addbasket d-grid gap-2 py-3">
-                                <button class="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
+                            <div className="addbasket d-grid gap-2 py-3">
+                                <button className="btn btn-sm border-0 text-center" type="button" style={{ backgroundColor: "#f59f05" }}>
                                     <div className='w-100'>
                                     <div className='d-flex text-white align-items-center py-2 justify-content-center' style={{ fontSize:"15px"}}>
                                         <span className='me-2'>Add to basket</span>
-                                        <i class="fa-solid fa-lock"></i>
+                                        <i className="fa-solid fa-lock"></i>
                                     </div>
                                     </div>
                                 </button>

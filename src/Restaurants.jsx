@@ -5,22 +5,29 @@ import offerimg1 from './image/offerimg1.jpg'
 import food4 from './image/food-4.jpg'
 import resto1 from './image/resto1.jpg'
 import axios from "axios"
-import { base_url } from './apiLinks'
+import { base_url } from './data/apiLinks'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { getAllRestaurants } from './data/data'
 export default function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    axios.get(`${base_url}/resturants`).then(
-      (response) => {
-        setRestaurants(response.data);
-        console.log(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    )
+    // axios.get(`${base_url}/api/all/all-restaurants`).then(
+    //   (response) => {
+    //     setRestaurants(response.data);
+    //     console.log(response.data);
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // )
+    const fetchRestaurants = async () => {
+      const data = await getAllRestaurants();
+      setRestaurants(data);
+      console.log(restaurants);
+    };
+    fetchRestaurants();
   }, []);
   // useEffect(() => {
   //   axios.get(`${base_url}/api/all/all-restaurants`).then(
@@ -80,24 +87,24 @@ export default function Restaurants() {
 
         <div className="row ">
           {
-            restaurants.length > 0 ? restaurants.map((restaurant, index) => {
+            restaurants ? restaurants.map((restaurant, index) => {
               return (
-                <div className="col-xl-6 col-md-6">
-                  <Link to="/restaurantd" style={{textDecoration:"none"}}>
-                    <div class="card shadow mb-4">
+                <div className="col-xl-6 col-md-6" key={index}>
+                  <Link to={`/restaurants/${restaurant.resturantId}?restaurant=${restaurant.resturantName}`} style={{textDecoration:"none"}}>
+                    <div className="card shadow mb-4">
                       <div className="container">
-                        <div class="text-start py-3">
+                        <div className="text-start py-3">
                           <img style={{ height: "100px", width: "100px", borderRadius: "7px" }} src={resto1} alt="" />
                         </div>
                         <div className="pt-1 text-start">
                           <h4 style={{ fontWeight: "bold" }}>{restaurant.resturantName}</h4>
                         </div>
                         <div className="d-flex pb-1" style={{ color: "#f29f05" }}>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
                         </div>
 
                         <div className='d-flex py-2'>
@@ -123,7 +130,7 @@ export default function Restaurants() {
 
                 </div>
               );
-            }) : "No Resturants AVailable"
+            }) : "No Resturants Available"
           }
 
         </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState }from 'react'
 import delivery from './image/body1.jpg';
 import illustration1 from './image/illustration-1.png';
 import illustration2 from './image/illustration-2.png';
@@ -8,11 +8,40 @@ import Photo3 from './image/photo-3.png';
 import Photo4 from './image/photo-4.png';
 import merchant from './image/merchant.jpg';
 import subscribe from './image/subscribe.png'
-import { base_url } from './apiLinks'
+import { base_url } from './data/apiLinks';
 import Navbar from './Navbar';
 import Footer from './Footer'; 
+import { isLoggedIn, logout } from './auth_cotroller/security';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { getAllRestaurants } from './data/data';
 
 export default function Body() {
+  if(isLoggedIn()){
+    console.log("user is logged in");
+  }
+  else{
+    console.log("user is not logged in");
+  }
+  const navigate = useNavigate();
+  const [restaurants, setRestaurants] = useState([]);
+  useEffect(() => {
+    const fetchRestaurants = async () => {
+      const data = await getAllRestaurants();
+      setRestaurants(data);
+    };
+    fetchRestaurants();
+  }, []);
+
+  const viewRestaurant = ()=>{
+    const selectElement = document.querySelector(".form-select");;
+    const restaurantId = selectElement.value;
+    const restaurantName = selectElement.options[selectElement.selectedIndex].textContent;
+    
+    if(restaurantId != "Select a Restaurant"){
+    navigate(`/restaurants/${restaurantId}?restaurant=${restaurantName}`);
+    console.log(restaurantName)
+    }
+  }
   return (
     <div>
       <Navbar/>
@@ -24,13 +53,17 @@ export default function Body() {
               Restaurants<br />in Your Home.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe explicabo perspiciatis ex vel rem quo fuga ullam in, totam aspernatur ea quasi atque architecto doloribus dolorem! Adipisci ratione neque voluptatibus libero perferendis eos esse sequi. Quibusdam explicabo incidunt accusantium repellendus.</p>
             <div className='d-flex'>
-              <select class="form-select " aria-label="Default select example" style={{ color: "gray" }}>
-                <option selected style={{ color: "gray" }}>Select a Restaurant</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+              <select className="form-select " aria-label="Default select example" style={{ color: "gray" }}>
+                <option defaultValue style={{ color: "gray" }}>Select a Restaurant</option>
+                {
+                  restaurants ? restaurants.map((restaurant,index) => {
+                    return (
+                      <option key={index} value={restaurant.resturantId}>{restaurant.resturantName}</option>
+                    );
+                  }):""
+                }
               </select>
-              <button className="btn text-white ms-2" type="submit" style={{ backgroundColor: "#f29f05" }}>Order&nbsp;now</button>
+              <button className="btn text-white ms-2" onClick={viewRestaurant}  style={{ backgroundColor: "#f29f05" }}>Order&nbsp;now</button>
             </div>
           </div>
           <div style={{ width: "28rem" }}>
@@ -45,33 +78,33 @@ export default function Body() {
           {/* //cards// services */}
           <div className="d-flex justify-content-around flex-wrap" >
             <div >
-              <div class="card bg-transparent border-0" style={{ width: "18rem" }}>
-                <img src={illustration1} class="card-img-top" alt="" />
-                <div class="card-body">
-                  <h4 class="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>01</span>Select Restaurant</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div className="card bg-transparent border-0" style={{ width: "18rem" }}>
+                <img src={illustration1} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h4 className="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>01</span>Select Restaurant</h4>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                 </div>
 
               </div>
             </div>
             <div >
-              <div class="card bg-transparent border-0" style={{ width: "18rem" }}>
-                <img src={illustration2} class="card-img-top" alt="" />
-                <div class="card-body">
-                  <h4 class="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>02</span>Select menu</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div className="card bg-transparent border-0" style={{ width: "18rem" }}>
+                <img src={illustration2} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h4 className="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>02</span>Select menu</h4>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                 </div>
 
               </div>
             </div>
             <div>
-              <div class="card bg-transparent border-0" style={{ width: "18rem" }}>
-                <img src={illustration3} class="card-img-top" alt="" />
-                <div class="card-body">
-                  <h4 class="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>03</span>Wait for Delivery</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div className="card bg-transparent border-0" style={{ width: "18rem" }}>
+                <img src={illustration3} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h4 className="card-title "><span style={{ color: "GrayText", fontSize: "30px" }}>03</span>Wait for Delivery</h4>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                 </div>
 
@@ -154,7 +187,7 @@ export default function Body() {
             <button style={{ borderRadius: "5px", border: "1px solid #f29f05", backgroundColor: "none", color: "#f29f05", width: "100px", height: "36px", fontSize: "15px" }}>
 
               SEE ALL &nbsp;
-              <i class="fa-solid fa-arrow-right "></i>
+              <i className="fa-solid fa-arrow-right "></i>
 
             </button>
           </div>
@@ -178,37 +211,37 @@ export default function Body() {
         {/* start of new service show good taste */}
         <div className='mb-4'>
 
-          <div class="row">
+          <div className="row">
             <div className="col text-start">
               <p style={{ fontSize: "30px", fontWeight: "bold" }}>
                 Service shows good taste.
               </p>
             </div>
 
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
+            <div className="col-xl-3 col-md-6 mb-4">
+              <div className="card border-0 shadow h-100 py-2">
+                <div className="card-body">
+                  <div className="row no-gutters align-items-center">
+                    <div className="col mr-2">
 
-                      <div class="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>976</div>
+                      <div className="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>976</div>
                     </div>
-                    <div class="col text-start">
+                    <div className="col text-start">
                       <p style={{ color: "gray", fontSize: "20px" }}>Satisfied Customers</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
+            <div className="col-xl-3 col-md-6 mb-4">
+              <div className="card border-0 shadow h-100 py-2">
+                <div className="card-body">
+                  <div className="row no-gutters align-items-center">
+                    <div className="col mr-2">
 
-                      <div class="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>120</div>
+                      <div className="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>120</div>
                     </div>
-                    <div class="col text-start">
+                    <div className="col text-start">
                       <p style={{ color: "gray", fontSize: "20px" }}>Best Restaurants</p>
                     </div>
                   </div>
@@ -216,15 +249,15 @@ export default function Body() {
               </div>
             </div>
 
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
+            <div className="col-xl-3 col-md-6 mb-4">
+              <div className="card border-0 shadow h-100 py-2">
+                <div className="card-body">
+                  <div className="row no-gutters align-items-center">
+                    <div className="col mr-2">
 
-                      <div class="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>1K+</div>
+                      <div className="h5 mb-0 font-weight-bold " style={{ color: "#f29f05", fontSize: "50px", fontWeight: "700" }}>1K+</div>
                     </div>
-                    <div class="col text-start">
+                    <div className="col text-start">
                       <p style={{ color: "gray", fontSize: "20px" }}>Food Delivered</p>
                     </div>
                   </div>
@@ -259,9 +292,9 @@ export default function Body() {
             Want To Join Partnership?
           </div>
           <div className="row">
-            <div class="col-xl-6 col-md-6 mb-4" style={{ backgroundImage: `url(${merchant})`, backgroundSize: "100% 100%", borderRadius: "20px" }}>
-              <div class="card border-0 shadow  py-2 bg-transparent " style={{ height: "250px" }} >
-                <div class="card-body bg-transparent">
+            <div className="col-xl-6 col-md-6 mb-4" style={{ backgroundImage: `url(${merchant})`, backgroundSize: "cover", backgroundRepeat:"no-repeat", borderRadius: "20px" }}>
+              <div className="card border-0 shadow  py-2 bg-transparent " style={{ height: "250px" }} >
+                <div className="card-body bg-transparent">
                   {/* <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
 
@@ -286,7 +319,7 @@ export default function Body() {
                   <a href={`${base_url}/restaurant-owner-registration`} rel="noreferrer" target='_blank' className='btn btn-warning text-dark'>
 
                     Register Now &nbsp;
-                    <i class="fa-solid fa-arrow-right "></i>
+                    <i className="fa-solid fa-arrow-right "></i>
 
                   </a>
                 </div>

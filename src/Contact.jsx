@@ -12,9 +12,9 @@ export default function Contact() {
             <p className='pt-5'  style={{ fontSize: "60px", fontWeight: "bold", lineHeight: "80px" }}>Contact Us</p>
             <p style={{color:"grey"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe explicabo perspiciatis ex vel rem quo </p>
             <div className='d-flex' style={{justifyContent:"space-between"}}>
-            <div class="card border-0" style={{width: "18rem",marginRight:"15px"}}>
-  <div class="card-body">
-    <div class="card-title"><i class="fa-solid fa-location-dot mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
+            <div className="card border-0" style={{width: "18rem",marginRight:"15px"}}>
+  <div className="card-body">
+    <div className="card-title"><i className="fa-solid fa-location-dot mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
     <p className='mt-3' style={{fontSize:"15px",fontWeight:"600"}}>
       Banglore,Karnataka 133222 , India
     </p>
@@ -23,9 +23,9 @@ export default function Contact() {
    
   </div>
 </div>
-<div class="card border-0" style={{width: "18rem",marginRight:"15px"}}>
-  <div class="card-body">
-    <div class="card-title"><i class="fa-solid fa-envelope mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
+<div className="card border-0" style={{width: "18rem",marginRight:"15px"}}>
+  <div className="card-body">
+    <div className="card-title"><i className="fa-solid fa-envelope mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
     <p className='mt-3' style={{fontSize:"15px",fontWeight:"600"}}>
       dabbawala.info@gmail.com
     </p>
@@ -34,9 +34,9 @@ export default function Contact() {
    
   </div>
 </div>
-<div class="card border-0" style={{width: "18rem",marginRight:"15px"}}>
-  <div class="card-body">
-    <div class="card-title"><i class="fa-solid fa-phone mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
+<div className="card border-0" style={{width: "18rem",marginRight:"15px"}}>
+  <div className="card-body">
+    <div className="card-title"><i className="fa-solid fa-phone mt-1" style={{ fontSize:"45px",textAlign:"center",color:"#f29f05"}}></i>
     <p className='mt-3' style={{fontSize:"15px",fontWeight:"600"}}>
       +91 9113170477
     </p>
@@ -60,9 +60,9 @@ export default function Contact() {
         </div>
 
        <div style={{paddingBottom:"50px",paddingTop:"50px"}}>
-       <div class="card " >
+       <div className="card " >
  
-       <div class="card-body d-flex">
+       <div className="card-body d-flex">
        {/* <div className="w-50">
     <p className="text-start m-0" style={{ fontWeight: "bold", fontSize: "30px" }}>
       Get in touch with us

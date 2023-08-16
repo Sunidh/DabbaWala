@@ -1,164 +1,83 @@
 import React from 'react'
-import './Signup.css'
+import { Link } from 'react-router-dom'
 export default function Signup() {
-  return (
-    <div className='py-5'>
-       
-       <section class="h-50 h-custom gradient-custom-2">
-  <div class="container py-5 h-50">
-    <div class="row d-flex justify-content-center align-items-center h-50">
-      <div class="col-12">
-        <div class="card card-registration card-registration-2" style={{borderRadius: "15px"}}>
-          <div class="card-body p-0">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-2" style={{color: "#f29f05"}}>General Infomation</h3>
+	return (
+		<div className='bg-danger py-1' style={{ minHeight: "100vh" }}>
 
-                  
+			<div className="container">
+				<div className="card o-hidden border-0 shadow-lg my-5">
+					<div className="card-body p-0">
+						{/* <!-- Nested Row within Card Body --> */}
+						<div className="row">
+							<div className="col-lg-5 d-none d-lg-block" style={{
+								background: 'url("https://source.unsplash.com/Mv9hjnEUHR4/600x800")',
+								backgroundPosition: 'center',
+								backgroundSize: 'cover'
+							}}>
+							</div>
+							<div className="col-lg-7">
+								<div className="p-5">
 
-                  <div class="row pt-5">
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev2">First name</label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev3">Last name</label>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="row pt-5">
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="email" id="form3Examplev2" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev2">Email</label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="number" id="form3Examplev3" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev3">Mobile</label>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  
-                  
-
-                  
-                </div>
-              </div>
-              <div class="col-lg-6 bg-indigo text-white">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-5">Address</h3>
-
-                  <div class="row pt-5">
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev2">First name</label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-6 mb-2 pb-2">
-
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-md" />
-                        <label class="form-label" for="form3Examplev3">Last name</label>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea2">Street + Nr</label>
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea3">Additional Information</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea4">Zip Code</label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-7 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea5">Place</label>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea6">Country</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea7">Code +</label>
-                      </div>
-
-                    </div>
-                    
-                  </div>
-
-                 
-
-                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                    <label class="form-check-label text-white" for="form2Example3">
-                      I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
-                      site.
-                    </label>
-                  </div>
-
-                  <button type="button" class="btn btn-light btn-lg"
-                    data-mdb-ripple-color="dark">Register</button>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    </div>
-  )
+									<div className="text-center">
+										<h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
+									</div>
+									<form className="user" method="post">
+										<div className="form-group row mb-3">
+											<div className="col-sm-6 mb-3 mb-sm-0">
+												<input type="text" className="form-control form-control-user" id="exampleFirstName"
+													placeholder="First Name" />
+											</div>
+											<div className="col-sm-6">
+												<input type="text" className="form-control form-control-user" id="exampleLastName"
+													placeholder="Last Name" />
+											</div>
+										</div>
+										<div className="form-group mb-3">
+											<input type="email" className="form-control"
+												placeholder="username" />
+										</div>
+										<div className="form-group mb-3">
+											<input type="email" className="form-control form-control-user"
+												placeholder="email" />
+										</div>
+										<div className="form-group row mb-3">
+											<div className="col-sm-6 mb-3 mb-sm-0">
+												<input type="password" className="form-control form-control-user"
+													id="exampleInputPassword" placeholder="Password" />
+											</div>
+											<div className="col-sm-6">
+												<input type="password" className="form-control form-control-user"
+													id="exampleRepeatPassword" placeholder="Repeat Password" />
+											</div>
+										</div>
+										<div className="text-center">
+											<button type="submit" className="btn btn-success mb-3">
+												Create Account
+											</button>
+										</div>
+										<hr />
+										<div className="text-center">
+											<a href="index.html" className="btn btn-danger my-2 me-2">
+												<i className="fab fa-google fa-fw"></i> Register with Google
+											</a>
+											<a href="index.html" className="btn btn-primary my-2">
+												<i className="fab fa-facebook-f fa-fw"></i> Register with Facebook
+											</a>
+										</div>
+									</form>
+									<hr />
+									
+									<div className="text-center">
+										<Link to="/login" className="small">Already have an account? Login!</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>.</div>
+		</div>
+	)
 }
 

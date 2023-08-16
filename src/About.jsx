@@ -35,11 +35,11 @@ export default function About() {
             </div>
             <div className="row py-5" >
                 <div className="col">
-                    <div class="card shadow mb-4 border-0">
+                    <div className="card shadow mb-4 border-0">
 
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="icon" style={{ fontSize: "80px", color: "#f29f05" }}>
-                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                <i className="fa-solid fa-hand-holding-heart"></i>
                             </div>
                             <div className="head">
                                 <h3>Free Delivery</h3>
@@ -51,11 +51,11 @@ export default function About() {
                     </div></div>
                
                 <div className="col">
-                    <div class="card shadow mb-4 border-0">
+                    <div className="card shadow mb-4 border-0">
 
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="icon" style={{ fontSize: "80px", color: "#f29f05" }}>
-                            <i class="fa-regular fa-clock"></i>
+                            <i className="fa-regular fa-clock"></i>
                             </div>
                             <div className="head">
                                 <h3>Save your time.</h3>
@@ -66,11 +66,11 @@ export default function About() {
                         </div>
                     </div></div>
                     <div className="col">
-                    <div class="card shadow mb-4 border-0">
+                    <div className="card shadow mb-4 border-0">
 
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="icon" style={{ fontSize: "80px", color: "#f29f05" }}>
-                            <i class="fa-solid fa-tags"></i>
+                            <i className="fa-solid fa-tags"></i>
                             </div>
                             <div className="head">
                                 <h3>Regular Discount</h3>
@@ -81,11 +81,11 @@ export default function About() {
                         </div>
                     </div></div>
                 <div className="col">
-                    <div class="card shadow mb-4 border-0">
+                    <div className="card shadow mb-4 border-0">
 
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="icon" style={{ fontSize: "80px", color: "#f29f05" }}>
-                            <i class="fa-solid fa-utensils "></i>
+                            <i className="fa-solid fa-utensils "></i>
                             </div>
                             <div className="head">
                                 <h3>Variety Food</h3>
@@ -107,18 +107,18 @@ export default function About() {
             </div>
             <div className="row py-3">
                 <div className="col w-50">
-                <div class="card border-0" style={{width: "18rem",background:"none"}}>
-  <img src={teamsa} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Gaurav Sharma</h5>
-    <p class="card-text" style={{color:"grey"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div className="card border-0" style={{width: "18rem",background:"none"}}>
+  <img src={teamsa} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">Gaurav Sharma</h5>
+    <p className="card-text" style={{color:"grey"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <div className="media-menu " >
           <ul className='d-flex text-start m-0 p-0' style={{listStyleType:"none",justifyContent:"flex-start",}}>
-            <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}> <i class="fa-brands fa-facebook-f my-2" ></i>
+            <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}> <i className="fa-brands fa-facebook-f my-2" ></i>
           
           </li>
-          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}><i class="fa-brands fa-instagram my-2"></i></li>
-          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}> <i class="fa-brands fa-twitter my-2"></i></li>
+          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}><i className="fa-brands fa-instagram my-2"></i></li>
+          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"16px",color:"grey"}}> <i className="fa-brands fa-twitter my-2"></i></li>
           </ul>
            
            </div>
@@ -127,18 +127,18 @@ export default function About() {
 </div>
                 </div>
                 <div className="col w-50">
-                <div class="card border-0" style={{width: "18rem",background:"none"}}>
-  <img src={teamsb} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Sunidhi Saurabh</h5>
-    <p class="card-text" style={{color:"grey"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div className="card border-0" style={{width: "18rem",background:"none"}}>
+  <img src={teamsb} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">Sunidhi Saurabh</h5>
+    <p className="card-text" style={{color:"grey"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <div className="media-menu " >
           <ul className='d-flex text-start m-0 p-0' style={{listStyleType:"none",justifyContent:"flex-start",alignItems:"center"}}>
-            <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}> <i class="fa-brands fa-facebook-f my-2" ></i>
+            <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}> <i className="fa-brands fa-facebook-f my-2" ></i>
           
           </li>
-          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}><i class="fa-brands fa-instagram my-2"></i></li>
-          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}> <i class="fa-brands fa-twitter my-2"></i></li>
+          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}><i className="fa-brands fa-instagram my-2"></i></li>
+          <li className='mr-1'  style={{borderRadius:"50%",border:"2px solid grey",height:"40px",width:"40px",textAlign:"center",fontSize:"20px",marginRight:"14px",color:"grey"}}> <i className="fa-brands fa-twitter my-2"></i></li>
           </ul>
            
            </div>

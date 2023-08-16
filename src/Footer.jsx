@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="row">
         <div className="col-xl-6 col-md-6 mb-4 px-0">
           <div className="card h-100  border-0">
-            <div class="card-body" style={{ backgroundColor: "#363636" }}>
+            <div className="card-body" style={{ backgroundColor: "#363636" }}>
             <div className="text-start">
             <div className='d-flex'>
 
